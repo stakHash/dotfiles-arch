@@ -1,0 +1,13 @@
+/.vim/dein/*
+!/.vim/dein/rc/
+
+/.config/*
+!/.config/fish/
+!/.config/karabiner/
+/.config/fish/*
+!/.config/fish/completions
+!/.config/fish/config.fish
+!/.config/fish/fishfile
+/.config/fish/completions/*
+!/.config/fish/completions/tmuxinator.fish
+

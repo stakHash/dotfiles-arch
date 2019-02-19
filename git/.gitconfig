@@ -1,0 +1,16 @@
+[user]
+	name = tksn-jp
+	email = tk5nj9@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nvim
+[alias]
+	co = checkout
+	st = status
+	br = branch
+	ci = commit
+[commit]
+	template = ~/.stCommitMsg
+
