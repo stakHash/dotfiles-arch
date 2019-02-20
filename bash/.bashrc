@@ -21,3 +21,7 @@ source $HOME/dot/dot.sh
 #######           tmux settings                  #######
 ########################################################
 export EDITOR="/usr/bin/nvim"
+
+## run fish
+fish
+
