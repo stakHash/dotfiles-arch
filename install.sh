@@ -31,7 +31,11 @@ makepkg -si
 
 # install tmux
 sudo pacman -Syu tmux ruby
+mkdir -p $HOME/.tmux/plugins
 gem install tmuxinator
+# install tpm (tmux plugin manager)
+git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+/bin/bash $HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 # install fisher (fish plugin manager) & plugins
 trizen -Syu fisher
