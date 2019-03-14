@@ -99,7 +99,7 @@ hook_post_source = '''
 	" go get -u github.com/sourcegraph/go-langserver
 	let g:LanguageClient_serverCommands = {
 		\ 'go': [$GOPATH.'/bin/go-langserver','-format-tool','gofmt','-lint-tool','golint'],
-		\ 'rust': ['./.cargo/bin/rustup', 'run', 'stable', 'rls']
+		\ 'rust': ['$HOME/.cargo/bin/rustup', 'run', 'stable', 'rls']
         \ }
 '''
 [[plugins]]
