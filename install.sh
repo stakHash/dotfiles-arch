@@ -10,7 +10,7 @@ DOTFILES_DIR=$(cd $(dirname $0);pwd)
 bash $DOTFILES_DIR/scripts/install_dot.sh
 
 # install packages
-sudo pacman -Syu base-devel git fish python python-pip neovim
+sudo pacman -Syu base-devel git python python-pip neovim
 
 # deploy dotfiles
 export DOT_REPO="https://github.com/tksn-jp/dotfiles-arch.git"
@@ -37,6 +37,6 @@ gem install tmuxinator
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 /bin/bash $HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
 
-# install fisher (fish plugin manager) & plugins
-trizen -Syu fisher
+# install zsh
+sudo pacman -Syu zsh zsh-completions
 
