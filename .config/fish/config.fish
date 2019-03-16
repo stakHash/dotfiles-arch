@@ -1,11 +1,6 @@
 # ------------------------- paths --------------------------
 set -x GOPATH $HOME/go
 
-set PATH \
-	$HOME/.cargo/bin \
-	$GOPATH/bin \
-	$PATH
-
 # ------------------- env -----------------------------------
 set -x VISUAL nvim
 set -x XDG_CONFIG_HOME $HOME/.config
@@ -16,8 +11,8 @@ set -x GO15VENDOREXPERIMENT 1
 
 # ------------------------------ aliases ------------------------
 alias .. 'cd ../'
-alias ... 'cd ../..'
-alias .... 'cd ../../..'
+alias ... 'cd ../../'
+alias .... 'cd ../../../'
 alias chrome 'open -a "google chrome"'
 
 # ------------------ other settings -----------------------------

@@ -39,6 +39,4 @@ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 # install fisher (fish plugin manager) & plugins
 trizen -Syu fisher
-fish
-fisher
 

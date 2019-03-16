@@ -22,6 +22,3 @@ source $HOME/dot/dot.sh
 ########################################################
 export EDITOR="/usr/bin/nvim"
 
-## run fish
-fish
-
