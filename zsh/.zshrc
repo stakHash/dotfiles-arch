@@ -1,7 +1,6 @@
 autoload -U compinit promptinit
 compinit
 promptinit
-bindkey -v
 
 # enable help command
 autoload -U run-help
@@ -48,8 +47,6 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle zsh-users/zsh-syntax-highlighting
 ## additional completion
 antigen bundle zsh-users/zsh-completions
-## auto suggestion like fish
-antigen bundle zsh-users/zsh-autosuggestions
 ## 256color
 antigen bundle chrissicool/zsh-256color
 ## url check
@@ -61,10 +58,25 @@ antigen bundle mollifier/anyframe
 alias aw='anyframe-widget-select-widget'
 ## enhanced cd
 antigen bundle b4b4r07/enhancd
+## historical substring completion
+antigen bundle zsh-users/zsh-history-substring-search
+## auto suggestion like fish
+antigen bundle zsh-users/zsh-autosuggestions
 
 ## theme
 antigen theme bureau
 
 ## Tell Antigen that you're done.
 antigen apply
+
+bindkey '^i' anyframe-widget-put-history
+bindkey '^x^i' anyframe-widget-put-history
+bindkey '^xi' anyframe-widget-put-history
+bindkey '^j' history-substring-search-up
+bindkey '^k' history-substring-search-down
+# bindkey -M vicmd 'k' history-substring-search-up
+# bindkey -M vicmd 'j' history-substring-search-down
+
+# zle -N zle-line-init
+# zle -N zle-keymap-select
 
