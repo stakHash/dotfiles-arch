@@ -52,12 +52,15 @@ tmux/.tmux.conf, $HOME/.tmux.conf
 .vim, $HOME/.vim
 .vim/.vimrc, $HOME/.vimrc
 
-# for neovim
-$HOME/.vimrc, $HOME/.config/nvim/init.vim
-
 #####################################################
 #                    bash                           #
 #####################################################
 bash/.bash_profile, $HOME/.bash_profile
 bash/.bashrc, $HOME/.bashrc
+
+#####################################################
+#                    zsh                            #
+#####################################################
+zsh/.zprofile, $HOME/.zprofile
+zsh/.zshrc, $HOME/.zshrc
 

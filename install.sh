@@ -38,5 +38,9 @@ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 /bin/bash $HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 # install zsh
-sudo pacman -Syu zsh zsh-completions
+sudo pacman -Syu zsh
+trizen -Syu antigen-git
+
+# install peco
+trizen -Syu peco
 

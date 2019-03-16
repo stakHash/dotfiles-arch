@@ -3,8 +3,8 @@
 
 /.config/*
 !/.config/fish/
-!/.config/karabiner/
 !/.config/nvim/
+!/.config/peco/config.json
 /.config/fish/*
 !/.config/fish/completions
 !/.config/fish/config.fish
