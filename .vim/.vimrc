@@ -34,6 +34,7 @@ set mouse=a
 set showmatch
 set autoindent
 set clipboard+=unnamed
+set clipboard+=unnamedplus
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4

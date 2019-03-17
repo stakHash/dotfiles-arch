@@ -1,3 +1,8 @@
+##
+## CAUTION:
+##	path should be set in zprofile, not here!
+##
+
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -53,11 +58,6 @@ antigen bundle chrissicool/zsh-256color
 antigen bundle ascii-soup/zsh-url-highlighter
 ## emoji
 antigen bundle b4b4r07/emoji-cli
-## peco wrapper
-antigen bundle mollifier/anyframe
-alias aw='anyframe-widget-select-widget'
-## enhanced cd
-antigen bundle b4b4r07/enhancd
 ## historical substring completion
 antigen bundle zsh-users/zsh-history-substring-search
 ## auto suggestion like fish
@@ -69,9 +69,6 @@ antigen theme bureau
 ## Tell Antigen that you're done.
 antigen apply
 
-bindkey '^i' anyframe-widget-put-history
-bindkey '^x^i' anyframe-widget-put-history
-bindkey '^xi' anyframe-widget-put-history
 bindkey '^j' history-substring-search-up
 bindkey '^k' history-substring-search-down
 # bindkey -M vicmd 'k' history-substring-search-up
