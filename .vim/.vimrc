@@ -1,6 +1,9 @@
 " ~~~~~~~~~~~~~~~ basic settings ~~~~~~~~~~~~~~~~~
 set runtimepath+=$HOME/.vim
 
+set wildmenu
+set wildmode=list:longest,full
+
 " lightline.vim
 set laststatus=2
 set noshowmode

@@ -20,11 +20,12 @@ alias help=run-help
 #######################################################################################
 ####                              aliases                                          ####
 #######################################################################################
+alias sudo='sudo '
 alias la='ls -la'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
-
+alias pow='powerpill'
 
 #######################################################################################
 ####                         oh-my-zsh with antigen                                ####
@@ -33,6 +34,7 @@ source /usr/share/zsh/share/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
+antigen bundle extract
 
 ############################### plugins #########################################
 
@@ -62,6 +64,7 @@ antigen bundle b4b4r07/emoji-cli
 antigen bundle zsh-users/zsh-history-substring-search
 ## auto suggestion like fish
 antigen bundle zsh-users/zsh-autosuggestions
+## extractor
 
 ## theme
 antigen theme bureau
