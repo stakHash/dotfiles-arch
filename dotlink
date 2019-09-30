@@ -64,4 +64,5 @@ bash/.bashrc, $HOME/.bashrc
 zsh/.zprofile, $HOME/.zprofile
 zsh/.zshrc, $HOME/.zshrc
 zsh/.zshenv, $HOME/.zshenv
+peco, $HOME/.peco
 

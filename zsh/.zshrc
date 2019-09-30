@@ -3,6 +3,11 @@
 ##	path should be set in zprofile, not here!
 ##
 
+### auto compile
+if [ $HOME/.dotfiles/zsh/.zshrc -nt $HOME/.zshrc.zwc ]; then
+	zcompile $HOME/.zshrc
+fi
+
 autoload -U compinit promptinit
 compinit
 promptinit
@@ -15,7 +20,9 @@ autoload run-help-svk
 unalias run-help
 alias help=run-help
 
-
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt hist_find_no_dups
 
 #######################################################################################
 ####                              aliases                                          ####
@@ -79,4 +86,29 @@ bindkey '^k' history-substring-search-down
 
 # zle -N zle-line-init
 # zle -N zle-keymap-select
+
+### peco
+function peco-z-search() {
+	which peco z > /dev/null
+	if [ $? -ne 0 ]; then
+		echo "install peco & z"
+		return 1
+	fi
+	local res=$(z | sort -rn | cut -c 12- | peco)
+	if [ -n "$res" ]; then
+		BUFFER+="cd $res"
+		zle accept-line
+	else
+		return 1
+	fi
+}
+function peco-history-selection() {
+	BUFFER=`history -n 1 | tac -r | awk '!a[$0]++' | peco`
+	CURSOR=$#BUFFER
+	zle reset-prompt
+}
+zle -N peco-history-selection
+zle -N peco-z-search
+bindkey '^r' peco-history-selection
+bindkey '^e' peco-z-search
 
