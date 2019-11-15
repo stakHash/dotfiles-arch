@@ -28,11 +28,13 @@ setopt hist_find_no_dups
 ####                              aliases                                          ####
 #######################################################################################
 alias sudo='sudo '
-alias la='ls -la'
+alias le='exa -lahF'
 alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias pow='powerpill'
+alias cat='bat'
+alias pdf='okular'
 
 #######################################################################################
 ####                         oh-my-zsh with antigen                                ####

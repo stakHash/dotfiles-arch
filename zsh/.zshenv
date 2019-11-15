@@ -4,6 +4,8 @@
 #   path=(~/bin /other/things/in/path $path[@])
 #
 
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 export _Z_DATA="$HOME/.local/share/z/.z"
 export EDITOR="nvim"
 export GOPATH="$HOME/go"
@@ -13,6 +15,9 @@ export GO111MODULE=on
 export XDG_CONFIG_HOME="$HOME/.config/"
 export ANDROID_HOME="$HOME/Android"
 export ANDROID_SDK_ROOT="$ANDROID_HOME/Sdk"
+
+# libreoffice dark theme
+export VCL_ICONS_FOR_DARK_THEME=1
 
 path=(
 	$HOME/.cargo/bin
