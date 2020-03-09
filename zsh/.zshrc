@@ -33,7 +33,6 @@ alias ..='cd ../'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias pow='powerpill'
-alias cat='bat'
 alias pdf='okular'
 
 #######################################################################################
@@ -90,27 +89,4 @@ bindkey '^k' history-substring-search-down
 # zle -N zle-keymap-select
 
 ### peco
-function peco-z-search() {
-	which peco z > /dev/null
-	if [ $? -ne 0 ]; then
-		echo "install peco & z"
-		return 1
-	fi
-	local res=$(z | sort -rn | cut -c 12- | peco)
-	if [ -n "$res" ]; then
-		BUFFER+="cd $res"
-		zle accept-line
-	else
-		return 1
-	fi
-}
-function peco-history-selection() {
-	BUFFER=`history -n 1 | tac -r | awk '!a[$0]++' | peco`
-	CURSOR=$#BUFFER
-	zle reset-prompt
-}
-zle -N peco-history-selection
-zle -N peco-z-search
-bindkey '^r' peco-history-selection
-bindkey '^e' peco-z-search
-
+source ~/.dotfiles/zsh/fzf.zsh

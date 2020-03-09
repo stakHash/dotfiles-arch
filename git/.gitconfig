@@ -11,6 +11,9 @@
 	st = status
 	br = branch
 	ci = commit
+	chmod = "!f(){ mode=$1; shift; git update-index --add --chmod=${mode} \"$*\"; }; f"
 [commit]
 	template = ~/.stCommitMsg
 
+[ghq]
+	root = /home/tksn-jp/repos

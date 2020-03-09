@@ -10,7 +10,7 @@ DOTFILES_DIR=$(cd $(dirname $0);pwd)
 bash $DOTFILES_DIR/scripts/install_dot.sh
 
 # install packages
-sudo pacman -Syu base-devel git python python-pip neovim
+sudo pacman -Syu python python-pip neovim
 
 # deploy dotfiles
 export DOT_REPO="https://github.com/tksn-jp/dotfiles-arch.git"
@@ -38,7 +38,7 @@ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 /bin/bash $HOME/.tmux/plugins/tpm/scripts/install_plugins.sh
 
 # install zsh
-sudo pacman -Syu zsh
+# sudo pacman -Syu zsh
 trizen -Syu antigen-git
 
 # install peco
