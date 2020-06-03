@@ -33,4 +33,5 @@ path=(
 )
 
 eval "$(goenv init -)"
+eval "$(gh completion -s zsh)"
 

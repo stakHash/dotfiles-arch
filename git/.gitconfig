@@ -17,3 +17,5 @@
 
 [ghq]
 	root = /home/tksn-jp/repos
+[pull]
+	rebase = false
