@@ -66,8 +66,8 @@ if system('echo -n $SHELL') =~# '/fish'
 	let g:python3_host_prog = system('type pyenv > /dev/null ^ /dev/null; and echo -n (pyenv root)"/versions/"(pyenv global | grep python3)"/bin/python"; or echo -n (which python3)')
 else
 	" for Bash/Zsh...
-	" let g:python_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | grep python2)/bin/python") || echo -n $(which python2)')
-	let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global | grep python3)/bin/python") || echo -n $(which python3)')
+	" let g:python3_host_prog = system('(type pyenv &>/dev/null && echo -n "$(pyenv root)/versions/$(pyenv global)/bin/python") || echo -n $(which python3)')
+	let g:python3_host_prog = '/usr/bin/python3'
 endif
 
 " directory where plugins will be installed

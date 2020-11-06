@@ -4,9 +4,11 @@ if = 'has("python3")'
 on_event = "InsertEnter"
 depends = 'context_filetype.vim'
 hook_source = '''
+	call deoplete#custom#option({
+	\ 'smart_case': v:true
+	\ })
 	let g:deoplete#enable_at_startup = 1
 	let g:deoplete#enable_ignore_case = 1
-	let g:deoplete#enable_smart_case = 1
 '''
 build = ':UpdateRemotePlugins'
 
