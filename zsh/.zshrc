@@ -25,6 +25,13 @@ setopt hist_ignore_space
 setopt hist_find_no_dups
 
 #######################################################################################
+####                              hooks                                            ####
+#######################################################################################
+source ~/.dotfiles/zsh/precmd_tmux.zsh
+autoload -Uz add-zsh-hooks
+add-zsh-hook precmd precmd_tmux
+
+#######################################################################################
 ####                              aliases                                          ####
 #######################################################################################
 alias sudo='sudo '
@@ -72,7 +79,6 @@ antigen bundle b4b4r07/emoji-cli
 antigen bundle zsh-users/zsh-history-substring-search
 ## auto suggestion like fish
 antigen bundle zsh-users/zsh-autosuggestions
-## extractor
 
 ## theme
 antigen theme bureau

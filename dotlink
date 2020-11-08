@@ -43,7 +43,7 @@ git/.stCommitMsg, $HOME/.stCommitMsg
 #####################################################
 #                  tmux                             #
 #####################################################
-tmux/.tmux-powerlinerc, $HOME/.tmux-powerlinerc
+tmux/tmux-pane-border, $HOME/.local/bin/tmux-pane-border
 tmux/.tmux.conf, $HOME/.tmux.conf
 
 #####################################################
