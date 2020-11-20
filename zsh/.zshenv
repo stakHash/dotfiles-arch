@@ -3,7 +3,6 @@
 # example:
 #   path=(~/bin /other/things/in/path $path[@])
 #
-
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 export _Z_DATA="$HOME/.local/share/z/.z"
@@ -40,11 +39,14 @@ path=(
 	$GOENV_ROOT/bin
 	$ANDROID_SDK_ROOT
 	$PYENV_ROOT/bin
+	$HOME/.nodenv/bin
+	$HOME/.yarn/bin
 	$HOME/.local/bin
 	$path
 )
 
 eval "$(goenv init -)"
-eval "$(gh completion -s zsh)"
-eval "$(pyenv init -)"
+eval "$(nodenv init -)"
+#eval "$(gh completion -s zsh)"
+#eval "$(pyenv init -)"
 

@@ -12,41 +12,6 @@ hook_source = '''
 '''
 build = ':UpdateRemotePlugins'
 
-[[plugins]]
-repo = 'padawan-php/deoplete-padawan'
-depends = ['deoplete.nvim']
-on_ft = 'php'
-hook_source = '''
-	let g:deoplete#sources#padawan#server_autostart=0
-	let g:deoplete#sources#padawan#add_parentheses=1
-	let g:deoplete#skip_chars = ['$']
-	command! PadawanStart call deoplete#sources#padawan#StartServer()
-	command! PadawanStop call deoplete#sources#padawan#StopServer()
-	command! PadawanRestart call deoplete#sources#padawan#RestartServer()
-	command! PadawanInstall call deoplete#sources#padawan#InstallServer()
-	command! PadawanUpdate call deoplete#sources#padawan#UpdatePadawan()
-	command! -bang PadawanGenerate call deoplete#sources#padawan#Generate(<bang>0)
-'''
-hook_post_source = '''
-	call deoplete#sources#padawan#StartServer()
-	setlocal sw=4 sts=4 ts=4 et
-'''
-hook_post_update = '''
-	call deoplete#sources#padawan#InstallServer()
-'''
-hook_done_update = '''
-	call deoplete#sources#padawan#UpdateServer()
-'''
-
-[[plugins]]
-repo = 'zchee/deoplete-clang'
-depends = ['deoplete.nvim']
-on_ft = ['c', 'cpp']
-hook_source = '''
-	let g:deoplete#sources#clang#libclang_path = '/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
-	let g:deoplete#sources#clang#clang_header = '/usr/local/Cellar/llvm/5.0.0/include/clang'
-'''
-
 # [[plugins]]
 # repo = 'sebastianmarkow/deoplete-rust'
 # depends = ['deoplete.nvim']
@@ -58,16 +23,6 @@ hook_source = '''
 # '''
 
 [[plugins]]
-repo = 'zchee/deoplete-go'
-build = 'make'
-on_ft = 'go'
-depends = ['deoplete.nvim']
-hook_source = '''
-    let g:deoplete#sources#go#gocode_binary = $GOPATH . '/bin/gocode'
-	let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-'''
-
-[[plugins]]
 repo = 'shougo/neco-vim'
 depends = ['deoplete.nvim']
 on_ft = 'vim'
@@ -76,16 +31,6 @@ on_ft = 'vim'
 repo = 'fszymanski/deoplete-emoji'
 depends = ['deoplete.nvim']
 on_ft = ['text', 'markdown']
-
-[[plugins]]
-repo = 'ponko2/deoplete-fish'
-depends = ['deoplete.nvim', 'vim-fish']
-on_ft = 'fish'
-
-[[plugins]]
-repo = 'slashmili/alchemist.vim'
-on_ft = 'elixir'
-depends = ['vim-elixir', 'deoplete.nvim']
 
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'

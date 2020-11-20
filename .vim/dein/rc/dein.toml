@@ -107,6 +107,8 @@ hook_add = '''
 repo = 'morhetz/gruvbox'
 hook_add = '''
   set background=dark
+  autocmd ColorScheme * highlight Normal ctermbg=none guibg=none
+  autocmd ColorScheme * highlight LineNr ctermbg=none guibg=none
   " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
   " 但し Colorscheme イベントの発生が抑制されないよう nented を付ける。
   au VimEnter * nested colorscheme gruvbox
