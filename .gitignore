@@ -2,13 +2,6 @@
 !/.vim/dein/rc/
 
 /.config/*
-!/.config/fish/
 !/.config/nvim/
 !/.config/peco/config.json
-/.config/fish/*
-!/.config/fish/completions
-!/.config/fish/config.fish
-!/.config/fish/fishfile
-/.config/fish/completions/*
-!/.config/fish/completions/tmuxinator.fish
 
