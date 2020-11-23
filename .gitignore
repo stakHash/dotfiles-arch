@@ -3,5 +3,6 @@
 
 /.config/*
 !/.config/nvim/
+!/.config/vifm/
 !/.config/peco/config.json
 
